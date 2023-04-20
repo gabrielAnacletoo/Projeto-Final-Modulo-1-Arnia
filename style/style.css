@@ -135,6 +135,7 @@ width: 15px !important;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
   }
   
   #cardRegister1,
