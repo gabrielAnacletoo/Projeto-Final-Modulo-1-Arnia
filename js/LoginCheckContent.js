@@ -141,7 +141,7 @@ const patientExists = async (CPF) => {
         }
         setTimeout(function() {
           location.reload();
-        }, 1000);
+        }, 500);
     
   }
     } catch (error) {
@@ -510,6 +510,10 @@ createPagination();
         };
 
         await editPatient(id, PatientEdited);
+        setTimeout(function() {
+          location.reload();
+        }, 500);
+    
       } catch (error) {
         console.error(error);
       }
@@ -527,6 +531,10 @@ createPagination();
       //evento de click em todos os botoes
       const id = btn.getAttribute("data-id"); //pega o valor de data id e atribui a id
       await deletePatient(id); //passa id para deletepatient
+      setTimeout(function() {
+        location.reload();
+      }, 100);
+  
     });
   })
 

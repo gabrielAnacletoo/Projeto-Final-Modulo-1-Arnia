@@ -114,6 +114,10 @@ btnFatos.addEventListener("click", async () => {
   };
 
   await CreateFato(id, newFato);
+  setTimeout(function() {
+    location.reload();
+  }, 500);
+
 })
 
 
@@ -199,6 +203,10 @@ btnNewSession.addEventListener("click", async () => {
       alert("Todos os campos precisam ser Preenchidos.");
     } else {
       await CreateSession(id, NewSession);
+      setTimeout(function() {
+        location.reload();
+      }, 500);
+  
     }
   } catch (error) {
     console.log(error);
