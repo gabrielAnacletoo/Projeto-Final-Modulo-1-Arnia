@@ -25,7 +25,7 @@ bntLogOut.addEventListener("click", () => {
 });
 
 //=====================================================>>> METHODS
-let url = "http://localhost:3000/pacientes";
+let url = "https://pacientes.onrender.com/pacientes";
 
 const createPatient = async (post) => {
   // Obtenho a lista de pacientes
@@ -56,7 +56,7 @@ const createPatient = async (post) => {
 
 //EDIT
 const editPatient = async (id, post) => {
-  await fetch(`http://localhost:3000/pacientes/${id}`, {
+  await fetch(`https://pacientes.onrender.com/pacientes/${id}`, {
     method: "PATCH",
     headers: {
       Accept: "application/json, text/plain, */*",
@@ -68,7 +68,7 @@ const editPatient = async (id, post) => {
 
 //DELETE
 const deletePatient = async (id) => {
-  await fetch(`http://localhost:3000/pacientes/${id}`, {
+  await fetch(`https://pacientes.onrender.com/pacientes/${id}`, {
     method: "DELETE",
   });
 }
@@ -76,7 +76,7 @@ const deletePatient = async (id) => {
 //====================================>>> VERIFICAR SE PACIENTE JA EXISTE
 
 const patientExists = async (CPF) => {
-  const url = "http://localhost:3000/pacientes";
+  const url = "https://pacientes.onrender.com/pacientes";
   const request = await fetch(url);
   const data = await request.json();
   const patient = data.find((patient) => patient.CPF === CPF);

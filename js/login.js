@@ -2,7 +2,7 @@
 ===========>>> VERIFICAR SE USUARIO JA EXISTE  
 */
 const userExists = async(userLogin, userPassword) => {
-    const url = "http://localhost:3000/users";
+    const url = "https://pacientes.onrender.com/users";
     const request = await fetch(url);
     const data = await request.json();
     const user = data.find((user) => user.nameUser === userLogin || user.passWord === userPassword);

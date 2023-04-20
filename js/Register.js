@@ -1,7 +1,7 @@
 /*
 ===========>>> METHODS  
 */
-const url = "http://localhost:3000/users"
+const url = "https://pacientes.onrender.com/users"
 const createPost = async (post) => {
   await fetch(url, {
     method: "POST",
@@ -15,7 +15,7 @@ const createPost = async (post) => {
 
 // ===========>>> EDIT METHOD PUT
 const edit = async (id, post) => {
-  await fetch(`http://localhost:3000/users/${id}`, {
+  await fetch(`https://pacientes.onrender.com/users/${id}`, {
     method: "PUT",
     headers: {
       'Accept': 'application/json, text/plain, */*',
@@ -27,7 +27,7 @@ const edit = async (id, post) => {
 
 // ===========>>> DELETE METHOD 
 const deletePost = async (id) => {
-  await fetch(`http://localhost:3000/users/${id}`, {
+  await fetch(`https://pacientes.onrender.com/users/${id}`, {
     method: "DELETE"
   })
 }
@@ -36,7 +36,7 @@ const deletePost = async (id) => {
 ===========>>> VERIFICAR SE USUARIO JA EXISTE  
 */
 const userExists = async(nameUser, email) => {
-  const url = "http://localhost:3000/users";
+  const url = "https://pacientes.onrender.com/users";
   const request = await fetch(url);
   const data = await request.json();
   const user = data.find((user) => user.nameUser === nameUser || user.email === email);
