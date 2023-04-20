@@ -5,55 +5,29 @@
   <title>Paginação com JavaScript puro</title>
 </head>
 <body>
-  <h1>Itens da API</h1>
-  <ul id="itens-list"></ul>
-  <div id="pagination-buttons"></div>
+  <div id="container">
+    <div id="divpai">
+      <div><button>Novo Cadastro</button> </div>
+      <div> <input type="text" placeholder="Filtrar"><button>Filtrar</button> </div>
+    </div>
+  </div>
 
-  <script>
-    const itensPerPage = 3;
-    let currentPage = 1;
-
-    async function fetchItens() {
-      const response = await fetch('http://localhost:3000/pacientes/');
-      const itens = await response.json();
-      return itens;
+  
+  <style>
+    #container {
+      width: 70%;
+      margin-left: 200px;
+      margin-top: 100px;
+     
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    async function displayItens() {
-      const itens = await fetchItens();
-      const totalItens = itens.length;
-      const totalPages = Math.ceil(totalItens / itensPerPage);
-
-      const startIndex = (currentPage - 1) * itensPerPage;
-      const endIndex = startIndex + itensPerPage;
-      const itensToShow = itens.slice(startIndex, endIndex);
-
-      const itensList = document.getElementById('itens-list');
-      const paginationButtons = document.getElementById('pagination-buttons');
-
-      itensList.innerHTML = '';
-      itensToShow.forEach(item => {
-        const li = document.createElement('li');
-        li.innerText = item.name;
-        itensList.appendChild(li);
-      });
-
-      paginationButtons.innerHTML = '';
-      for (let i = 1; i <= totalPages; i++) {
-        const button = document.createElement('button');
-        button.innerText = i;
-        button.onclick = () => {
-          currentPage = i;
-          displayItens();
-        };
-        if (i === currentPage) {
-          button.disabled = true;
-        }
-        paginationButtons.appendChild(button);
-      }
+    #divpai {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
     }
-
-    displayItens();
-  </script>
+  </style>
 </body>
 </html>

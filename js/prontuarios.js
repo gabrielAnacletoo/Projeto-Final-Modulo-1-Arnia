@@ -116,7 +116,7 @@ btnFatos.addEventListener("click", async () => {
   await CreateFato(id, newFato);
   setTimeout(function() {
     location.reload();
-  }, 500);
+  }, 10);
 
 })
 
@@ -449,8 +449,7 @@ Se não tiver fatos relevantes com o mesmo id da sessão excluida, o array sesso
 /* Deletar Sessões */
 const deleteSession = async (id) => {
   try {
-    const idurl = urlParams.get("id");
-    const url = `https://pacientes.onrender.com/${idurl}`;
+    const url = `https://pacientes.onrender.com/${urlParams.get('id')}`;
     const conn = await fetch(url);
     const sessoesDelet = await conn.json();
     const fatosdelet = sessoesDelet.FatoRelevante;
@@ -469,7 +468,7 @@ const deleteSession = async (id) => {
         );
       }
     }
-    await fetch(`https://pacientes.onrender.com/${idurl}`, {
+    await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

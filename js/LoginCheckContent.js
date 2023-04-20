@@ -15,7 +15,7 @@ window.addEventListener("load", async () => {
   }
 });
 
-//==========================================>> BUTTON LOGOUT
+//==========================================>> Logout
 
 const bntLogOut = document.querySelector("#logOut");
 bntLogOut.addEventListener("click", () => {
@@ -23,7 +23,7 @@ bntLogOut.addEventListener("click", () => {
   window.location.replace("../index.html");
 });
 
-//=====================================================>>> METHODS
+//=====================================================>>> Metodos
 let url = "https://pacientes.onrender.com/pacientes";
 
 const createPatient = async (post) => {
@@ -141,7 +141,7 @@ const patientExists = async (CPF) => {
         }
         setTimeout(function() {
           location.reload();
-        }, 500);
+        }, 10);
     
   }
     } catch (error) {
@@ -512,7 +512,7 @@ createPagination();
         await editPatient(id, PatientEdited);
         setTimeout(function() {
           location.reload();
-        }, 500);
+        }, 10);
     
       } catch (error) {
         console.error(error);
