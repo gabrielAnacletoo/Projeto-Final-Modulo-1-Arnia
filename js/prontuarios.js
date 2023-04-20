@@ -497,7 +497,7 @@ const editarFatos = async (idFato) => {
   
     const btnCancel = DivFatosEdit.querySelector('#CancelarFato');
     const btnSave = DivFatosEdit.querySelector('#SalvarFato');
-    const response = await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`);
+    const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`);
     const result = await response.json();
     const sessionIndex = result.FatoRelevante.findIndex((Fato) => Fato.id === idFato);
     btnCancel.addEventListener('click', () => {
