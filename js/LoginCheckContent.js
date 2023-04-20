@@ -1,5 +1,4 @@
-window.addEventListener("load", async (e) => {
-  e.preventDefault();
+window.addEventListener("load", async () => {
   try {
     let user = localStorage.getItem("user");
     let JSONuser = JSON.parse(user);
@@ -87,8 +86,7 @@ const patientExists = async (CPF) => {
 //====================================>> Cadastrar Paciente
 
   const btnCreate = document.querySelector("#btnRegisterPaciente");
-  btnCreate.addEventListener("click", async (e) => {
-    e.preventDefault();
+  btnCreate.addEventListener("click", async () => {
     try {
       const PacienteCPF = document.querySelector("#cpf").value;
       const PacienteNome = document.querySelector("#nome").value;
@@ -447,8 +445,7 @@ createPagination();
 
   const SaveEdit = document.querySelectorAll("#EditSave");
   SaveEdit.forEach((btnEdit) => {
-    btnEdit.addEventListener("click", async (e) => {
-      e.preventDefault();
+    btnEdit.addEventListener("click", async () => {
 
       let id = btnEdit.getAttribute("data-id");
       const modalEditor = document.querySelector(
