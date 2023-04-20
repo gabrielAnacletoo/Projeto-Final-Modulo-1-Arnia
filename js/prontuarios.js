@@ -524,6 +524,10 @@ const editarFatos = async (idFato) => {
 
       const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`, options);
       const updatedSession = await response.json();
+
+setTimeout(function() {
+          location.reload();
+        }, 10);
     })
   } catch (error) {
     console.error('erro: ' + error);
