@@ -146,6 +146,10 @@ width: 15px !important;
  #cardRegister1 {
 margin-left: 1em;
 }
+
+#cardRegister2 {
+margin-left: 1em;
+}
   #cardRegister1 img,
   #cardRegister2 img {
     width: 100%;
