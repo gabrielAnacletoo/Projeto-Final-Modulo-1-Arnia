@@ -18,8 +18,8 @@ const userExists = async(userLogin, userPassword) => {
 */
 const login = document.querySelector("#btnEntrar");
 const SmallMsgerror = document.querySelector("#smallerror")
-login.addEventListener("click" , async() => {
-
+login.addEventListener("click" , async(e) => {
+  e.preventDefault();
     try {
     const userLogin = document.querySelector("#loginInput").value
     const userPassword = document.querySelector("#passUserInput").value
