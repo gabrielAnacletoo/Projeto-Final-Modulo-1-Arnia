@@ -135,13 +135,17 @@ const patientExists = async (CPF) => {
   } else {
     await createPatient(NewPatient)
     const modal = document.querySelector('#modalcriacao');
+    modal.classList.remove('d-none');
     modal.classList.add('show');
     modal.style.display = 'block';
-    const modalBody = document.querySelector('#modalBody');
-    modalBody.innerHTML = `<p class="text-success"> Paciente cadastrado com sucesso!</p>`
-        setTimeout(function() {
-          location.reload();
-        }, 10);
+    
+    setTimeout(function() {
+      location.reload();
+      modal.classList.add('d-none');
+      modal.classList.remove('show');
+      modal.style.display = 'none';
+    }, 10);
+    
     
   }
     } catch (error) {
