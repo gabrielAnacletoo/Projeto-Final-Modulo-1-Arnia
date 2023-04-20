@@ -126,7 +126,7 @@ btnFatos.addEventListener("click", async () => {
 
 
 const CreateSession = async (id, NewSession) => {
-  const url = `https://pacientes.onrender.com/${id}/`;
+  const url = `https://pacientes.onrender.com/pacientes/${id}/`;
   const response = await fetch(url);
   const sessions = await response.json();
 
@@ -221,7 +221,7 @@ btnNewSession.addEventListener("click", async () => {
 // exibi os conteudos de fatos e sessoes juntos
 window.addEventListener("load", async () => {
   let id = urlParams.get("id");
-  let url = `https://pacientes.onrender.com/${id}`;
+  let url = `https://pacientes.onrender.com/pacientes/${id}`;
   try {
     const show = document.querySelector("#SessionResult");
     const conn = await fetch(url);
