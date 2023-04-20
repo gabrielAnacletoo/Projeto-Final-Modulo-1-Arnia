@@ -130,12 +130,16 @@ width: 15px !important;
 }
 
 @media screen and (max-width: 768px) {
+html, body 
+{ 
+ height: 100%;
+ overflow: hidden
+}
 
   body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
   }
   
   #cardRegister1,
