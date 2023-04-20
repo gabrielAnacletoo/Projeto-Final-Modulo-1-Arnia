@@ -393,7 +393,7 @@ const editar = async (idSessao) => {
     const btnCancel = divArea.querySelector('#CancelarEdition');
     const btnSave = divArea.querySelector('#SalvarEdition');
 
-    const response = await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`);
+    const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`);
     const result = await response.json();
 
     const sessionIndex = result.sessoesPaciente.findIndex((sessao) => sessao.id === idSessao);
