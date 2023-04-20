@@ -533,7 +533,7 @@ createPagination();
       await deletePatient(id); //passa id para deletepatient
       setTimeout(function() {
         location.reload();
-      }, 100);
+      }, 10);
   
     });
   })

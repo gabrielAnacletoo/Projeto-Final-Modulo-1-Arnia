@@ -60,7 +60,7 @@ window.addEventListener("load", async () => {
 
 //Criando novo fato
 const CreateFato = async (id, newFato) => {
-  const url = `https://pacientes.onrender.com/${id}/`;
+  const url = `https://pacientes.onrender.com/pacientes/${id}/`;
   const response = await fetch(url);
   const fatosresult = await response.json();
 
@@ -126,7 +126,7 @@ btnFatos.addEventListener("click", async () => {
 
 
 const CreateSession = async (id, NewSession) => {
-  const url = `https://pacientes.onrender.com/${id}/`;
+  const url = `https://pacientes.onrender.com/pacientes/${id}/`;
   const response = await fetch(url);
   const sessions = await response.json();
 
@@ -221,7 +221,7 @@ btnNewSession.addEventListener("click", async () => {
 // exibi os conteudos de fatos e sessoes juntos
 window.addEventListener("load", async () => {
   let id = urlParams.get("id");
-  let url = `https://pacientes.onrender.com/${id}`;
+  let url = `https://pacientes.onrender.com/pacientes/${id}`;
   try {
     const show = document.querySelector("#SessionResult");
     const conn = await fetch(url);
@@ -393,7 +393,7 @@ const editar = async (idSessao) => {
     const btnCancel = divArea.querySelector('#CancelarEdition');
     const btnSave = divArea.querySelector('#SalvarEdition');
 
-    const response = await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`);
+    const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`);
     const result = await response.json();
 
     const sessionIndex = result.sessoesPaciente.findIndex((sessao) => sessao.id === idSessao);
@@ -415,8 +415,12 @@ const editar = async (idSessao) => {
         body: JSON.stringify(result)
       };
 
-      const response = await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`, options);
+      const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`, options);
       const updatedSession = await response.json();
+
+setTimeout(function() {
+          location.reload();
+        }, 300);
 
     });
   } catch (error) {
@@ -449,7 +453,12 @@ Se não tiver fatos relevantes com o mesmo id da sessão excluida, o array sesso
 /* Deletar Sessões */
 const deleteSession = async (id) => {
   try {
+<<<<<<< HEAD
     const url = `https://pacientes.onrender.com/${urlParams.get('id')}`;
+=======
+    const idurl = urlParams.get("id");
+    const url = `https://pacientes.onrender.com/pacientes/${idurl}`;
+>>>>>>> ce9e14badf277ea237731b394ff565de77f03b37
     const conn = await fetch(url);
     const sessoesDelet = await conn.json();
     const fatosdelet = sessoesDelet.FatoRelevante;
@@ -468,7 +477,11 @@ const deleteSession = async (id) => {
         );
       }
     }
+<<<<<<< HEAD
     await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`, {
+=======
+    await fetch(`https://pacientes.onrender.com/pacientes/${idurl}`, {
+>>>>>>> ce9e14badf277ea237731b394ff565de77f03b37
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -478,6 +491,9 @@ const deleteSession = async (id) => {
   } catch (error) {
     console.log(error);
   }
+setTimeout(function() {
+          location.reload();
+        }, 10);
 }
 
 
@@ -496,7 +512,7 @@ const editarFatos = async (idFato) => {
   
     const btnCancel = DivFatosEdit.querySelector('#CancelarFato');
     const btnSave = DivFatosEdit.querySelector('#SalvarFato');
-    const response = await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`);
+    const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`);
     const result = await response.json();
     const sessionIndex = result.FatoRelevante.findIndex((Fato) => Fato.id === idFato);
     btnCancel.addEventListener('click', () => {
@@ -514,8 +530,12 @@ const editarFatos = async (idFato) => {
         body: JSON.stringify(result)
       };
 
-      const response = await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`, options);
+      const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`, options);
       const updatedSession = await response.json();
+
+setTimeout(function() {
+          location.reload();
+        }, 10);
     })
   } catch (error) {
     console.error('erro: ' + error);

@@ -143,15 +143,14 @@ width: 15px !important;
     height: auto;
    
   }
-  
-  #cardRegister1 {
-    height: auto;
-  }
-  
-  #cardRegister2 {
-    height: auto;
-  }
-  
+ #cardRegister1 {
+margin-left: 0.2em;
+}
+
+#cardRegister2 {
+top: 10em;
+margin-left: 0.1em;
+}
   #cardRegister1 img,
   #cardRegister2 img {
     width: 100%;
@@ -345,6 +344,14 @@ hr {
 }
 #divOfSessoes {
   margin-top: 0.6em;
+}
+
+@media screen and (max-width: 750px) {
+#cardProntuario2 {
+    display: flex;
+    width:19em;
+    height: 6.2em;
+  }
 }
 @media screen and (max-width: 768px) {
   #Welcome {
