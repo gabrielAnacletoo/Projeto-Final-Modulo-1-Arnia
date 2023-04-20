@@ -453,12 +453,7 @@ Se não tiver fatos relevantes com o mesmo id da sessão excluida, o array sesso
 /* Deletar Sessões */
 const deleteSession = async (id) => {
   try {
-<<<<<<< HEAD
     const url = `https://pacientes.onrender.com/${urlParams.get('id')}`;
-=======
-    const idurl = urlParams.get("id");
-    const url = `https://pacientes.onrender.com/pacientes/${idurl}`;
->>>>>>> ce9e14badf277ea237731b394ff565de77f03b37
     const conn = await fetch(url);
     const sessoesDelet = await conn.json();
     const fatosdelet = sessoesDelet.FatoRelevante;
@@ -477,11 +472,7 @@ const deleteSession = async (id) => {
         );
       }
     }
-<<<<<<< HEAD
     await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`, {
-=======
-    await fetch(`https://pacientes.onrender.com/pacientes/${idurl}`, {
->>>>>>> ce9e14badf277ea237731b394ff565de77f03b37
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
