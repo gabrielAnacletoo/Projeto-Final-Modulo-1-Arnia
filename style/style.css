@@ -143,15 +143,9 @@ width: 15px !important;
     height: auto;
    
   }
-  
-  #cardRegister1 {
-    height: auto;
-  }
-  
-  #cardRegister2 {
-    height: auto;
-  }
-  
+ #cardRegister1 {
+margin-left: 1em;
+}
   #cardRegister1 img,
   #cardRegister2 img {
     width: 100%;
