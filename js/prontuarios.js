@@ -479,6 +479,9 @@ const deleteSession = async (id) => {
   } catch (error) {
     console.log(error);
   }
+setTimeout(function() {
+          location.reload();
+        }, 500);
 }
 
 
