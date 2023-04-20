@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  background-color: #e5e5e5;
+}
+#imgfundo1 {
+  width: 177.12px;
+  height: 176.71px;
+  position: absolute;
+  left: 5.94%;
+  right: 82.33%;
+  top: 3%;
+  bottom: 79.11%;
+}
+#imgfundo2 {
+  width: 500.42px;
+  height: 629.84px;
+  position: absolute;
+  right: 70.86%;
+  bottom: 21.99%;
+  top: 210.68px;
+  left: -36.42px;
+}
+
+#formulario {
+  margin-top: 70px !important;
+  position: absolute;
+  z-index: 3;
+  height: 490px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background-color: #017849;
+  margin-bottom: 50px;
+}
+
+form label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+
+form h1 {
+  font-size: 4em;
+  color: #fff;
+}
+
+form #btnEntrar {
+  margin-top: 1em;
+  color: #fff;
+  font-weight: bold;
+  background-color: #017849;
+}
+form #cadastrar {
+  color: #fff;
+  font-weight: 500;
+  background-color: #017849;
+}
+
+form img {
+  width: 17em;
+}
+.btnTabela {
+  width: 32px;
+}
+/*
+registro
+*/
+.size-eye {
+  cursor: pointer;
+}
+img#arrowRight{
+width: 15px !important;
+}
+
+#cardRegister1, #cardRegister2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+
+#cardRegister1 {
+  z-index: 2;
+  width: 31em;
+  height: 450px;
+  margin-left: 7em;
+}
+
+#cardRegister2 {
+  transform: rotateY(-180deg);
+  z-index: 1;
+  width: 31em;
+  height: 540px;
+  margin-left: 7em;
+}
+
+#container.flip #cardRegister1 {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+#container.flip #cardRegister2 {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+
+#cardRegister1 img,
+#cardRegister2 img {
+  width: 180px;
+}
+#cardRegister1 p,
+#cardRegister2 p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+#TextosObigatorios{
+  font-size: 14px;
+  color: #6F6F6E;
+}
+
+@media screen and (max-width: 768px) {
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #cardRegister1,
+  #cardRegister2 {
+    max-width: 90%;
+    height: auto;
+   
+  }
+  
+  #cardRegister1 {
+    height: auto;
+  }
+  
+  #cardRegister2 {
+    height: auto;
+  }
+  
+  #cardRegister1 img,
+  #cardRegister2 img {
+    width: 100%;
+    max-width: 180px;
+  }
+  
+  #TextosObigatorios {
+    font-size: 12px;
+  }
+}
+
+
+
+/*
+========================================================================================
+cadastro termina acima 
+  */
+
+/* nav da home */
+nav img {
+  width: px;
+}
+#logo {
+  background-color: #FFF;
+  top: 0;
+  width: 80px;
+  height: 80.75px;
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 1;
+}
+
+#letraO {
+  width:9.71px;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  transform: translate(0, -10px);
+}
+
+#letraX {
+  width: 28px ;
+  position: absolute;
+  left: 29%;
+  top: 21%;
+  transform: translate(0, 10px);
+}
+nav {
+  background-color: #FFF;
+  position: absolute;
+  width: 100%;
+  height: 80.75px;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: #FFF;
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    left: 0;
+  }
+  #logo {
+    background-color: #FFF;
+    top: 0;
+    left: 1em;
+    width: 40px;
+    height: 70px;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 1;
+  }
+  #letraO {
+    width:9.71px;
+    position: absolute;
+    left: 22%;
+    top: 30%;
+    transform: translate(0, -10px);
+  }
+  
+  #letraX {
+    width: 28px ;
+    position: absolute;
+    left: 1px;
+    top: 21%;
+    transform: translate(0, 10px);
+  }
+}
+/*
+  conteudo principal ======================
+  */
+
+  #inputFiltrar {
+    height:40px;
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  border-radius: 24px 0px 0px 24px;
+  }
+  #filtrar {
+    height: 40px;
+    border-radius: 0px 30px 30px 0px;
+  }
+  #logoSearch { 
+    width: 1.2em;
+
+  }
+  #plusCircle {
+    width: 1.4em;
+  }
+  #logOut {
+    cursor: pointer;
+  }
+
+/*
+modal prontuario
+*/
+
+/*
+Conteudos principais 
+*/
+.Comfortaa-font {
+  font-family: 'Comfortaa', cursive;
+}
+
+.numbersCircle { 
+  padding: 4px 10px 4px 10px;
+}
+
+/*
+conteudo da pagina de pronturario
+*/
+
+#cardProntuario1 img {
+  width: 13px;
+}
+#cardProntuario2 {
+  width:53em;
+  height: 6em;
+}
+#radio1 {
+  margin-top: -5px;
+}
+#radio2 {
+  margin-top: -4px;
+}
+#resultApi {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+}
+#SessaoDiv {
+  display: block;
+}
+
+#resultApi a{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0;
+  margin-top:0.4em;
+  font-family: 'Montserrat', sans-serif;
+}
+.circleResult {
+  width:2.2em;
+  left: 2.3em;
+}
+.conteudoCircleResult{
+  width:1.3em;
+  left: 2.35em;
+}
+#divisorBlue {
+  height: 5em;
+  width: 0.22em;
+  position: absolute;
+  z-index: -1;
+  top: -5em;
+  left: 2.2em;
+}
+
+#divisorGreen {
+  height: 5em;
+  width: 0.21em;
+  position:absolute;
+  z-index: -1;
+  top: 9em;
+  left: 2.2em;
+}
+hr {
+  width: 100%;
+}
+#divOfSessoes {
+  margin-top: 0.6em;
+}
+@media screen and (max-width: 768px) {
+  #Welcome {
+    display: none;
+  }
+#voltarHome {
+  font-size: 0.7em;
+
+}
+  #divSessoes {
+    margin-top: 1em;
+  }
+  #cardProntuario2 {
+    display: flex;
+    width:20em;
+    height: 6em;
+  }
+}
+
+/*
+modal dos fatos
+*/
+
+#modalFatos {
+  width: 642px;
+}
+
+/* 
+  pagina de conteudo ao clicar na sessão
+*/
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+#contentSession span {
+  font-weight: 400;
+  font-size: 16px;
+}
+#contentSession img {
+  width: 6px;
+}
+#Textarearesumo {
+  width: 100%;
+}
+#TextAreaFatos{
+  width: 100%;
+}
+#DivArea {
+  display: none;
+}
+#DivFatosEdit {
+  display: none;
+}
+/*
+UL gerada dinamicamente no prontuario
+*/
+ul li #editsessionpng, #deletesessionpng {
+  width: 1em;
+
+}
+#uldrop li a {
+  font-size: 1em;
+}
+#h3sessoes {
+  margin-left: 5.3em;
+}
+@media screen and (max-width: 768px) {
+  #h3sessoes {
+    margin-left: 5.6em;
+  }
+  #divInformacoes {
+    margin-right: 4.9em;
+  }
+  #voltar {
+    margin-left: 1.9em;
+  }
+}
+
+/*
+loader apois criar paciente
+*/

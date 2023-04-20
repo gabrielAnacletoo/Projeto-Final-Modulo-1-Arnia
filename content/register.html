@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projeto Wexer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="../style/style.css">
+
+    <script
+    src="https://kit.fontawesome.com/1bd40db174.js"
+    crossorigin="anonymous"
+  ></script>
+  
+</head>
+  <body>
+  <img id="imgfundo1" src="../img/vetorO.png">
+  <img id="imgfundo2" src="../img/vetorx.png">
+
+
+    <div id="container" class="container-fluid d-flex justify-content-center align-items-center vh-100">
+      <!-- CARD 1 -->
+    <div class="card shadow rounded-4" id="cardRegister1">
+        <div class="card-body">
+            <div class="text-center">
+                <img class="mt-1" src="../img/logocad.png" alt="">
+                <p class="text-success mt-4 mb-0">Seja bem-vindo(a)!</p>
+                <p class="text-success">Preencha os campos para se cadastrar</p>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-9 ms-md-5">
+                    <label for="nameRegInput" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nameRegInput" placeholder="Ex: Gabriel" autofocus required>
+                    <small class="errorPassword text-danger" id="errorPassword1"></small>
+                </div>
+                <div class="mb-3 col-md-9 ms-md-5">
+                    <label for="EmailRegInput" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="EmailRegInput" placeholder="gabrielanacleto159@live.com" required>
+                    <small class="errorPassword text-danger"></small>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center ms-md-5 me-md-5">
+                <button class="btn btn-outline"><a href="../index.html" class="text-secondary text-decoration-none">Inicio</a></button>
+                <button class="btn btn-success shadow rounded me-2 px-5 py-2 mt-3" id="btnProsseguir1"><strong>Prosseguir</strong> <img id="arrowRight" class="align-middle" src="../img/Mask.png" alt="Seta Para Direita"></button>
+            </div>
+        </div>
+    </div>
+
+          
+
+  <!-- CARD 2 -->
+<div class="card shadow rounded-4 flip" id="cardRegister2">
+    <div class="card-body" id="back">
+      <div class="text-center">
+        <img class="mt-1" src="../img/logocad.png" alt="">
+        <p class="text-success mt-4 mb-0">Seja bem-vindo(a)!</p>
+        <p class="text-success">Escolha uma senha</p>
+      </div>
+      <div class="row mb-3">
+        <div class="col-10 col-md-6 mx-auto">
+          <label for="PasswordInput" class="form-label ms-5">Senha</label>
+          <div class="input-group">
+            <input type="password" class="form-control p-2" name="inputSenhas" id="PasswordInput" autofocus>
+            <span class="input-group-text"><i class="fa-regular fa-eye size-eye"></i></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-10 col-md-6 mx-auto">
+          <label for="PassConfirmInput" class="form-label ms-5">Confirmar Senha</label>
+          <div class="input-group">
+            <input type="password" class="form-control p-2" name="inputSenhas" id="PassConfirmInput">
+            <span class="input-group-text"><i class="fa-regular fa-eye size-eye"></i></span>
+          </div>
+          <small class="text-danger col-12 text-center d-block" id="smallc2"></small>
+        </div>
+      </div>
+      
+      <div class="text-start ms-5" id="TextosObigatorios">
+        <p><span class="text-danger">*</span>Precisa ter no mínimo 8 digitos</p>
+        <p><span class="text-danger">*</span>Precisa conter um caractere especial */+.</p>
+        <p><span class="text-danger">*</span>Precisa conter uma letra em MAIÚSCULA</p>
+      </div>
+      <div class="d-flex justify-content-between align-items-center ms-5 me-5">
+        <button class="btn btn-outline" id="back">Voltar</button>
+        <button class="btn btn-success shadow rounded px-5 py-2" id="btnReg"><strong>Cadastrar</strong></button>
+      </div>
+    </div>
+  </div>
+  
+                          
+    </div>
+    <script src="../js/Register.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  </body>
+</html>

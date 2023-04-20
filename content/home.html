@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projeto Wexer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/1bd40db174.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favi icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicons/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+
+    
+    <!-- START OF NAVBAR -->
+    <nav>
+      <div
+        class="dropdown justify-content-end text-end d-flex align-items-center h-100 text-success fs-5 me-0 font-montserrat"
+      >
+        Bem vindo(a),
+        <button
+          class="btn btn-outline dropdown-toggle border-0 p-0 mx-2"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <strong
+            class="text-success fs-5 text-capitalize font-montserrat"
+            id="ShowName"
+          ></strong>
+        </button>
+        <ul class="dropdown-menu">
+          <li><span class="dropdown-item" id="showEmail"></span></li>
+          <li>
+            <span class="dropdown-item" id="logOut"
+              ><i
+                class="fa-solid fa-share fa-flip-vertical me-1"
+                style="color: #017849"
+              ></i
+              >Sair</span
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <!-- IMAGE INSIDE NAVBAR -->
+    <div id="logo">
+      <img src="../img/Vectorverde.png" alt="logo O" id="letraO" />
+      <img src="../img/Vectorxverde.png" alt="logo X" id="letraX" />
+    </div>
+    <!-- IMAGE INSIDE OF NAVBAR -->
+
+    <!-- START CONTENT WITH TABLE -->
+    <div class="container mt-5">
+      <h3 class="text-secondary pt-5 Comfortaa-font">Meus pacientes</h3>
+      <div class="card border border-0 rounded-4 mt-3 py-5">
+        <div class="card-body">
+
+          
+          <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success rounded-pill d-flex justify-content-start align-items-center py-2 mb-3 mb-md-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <img src="../img/plus-circle.png" id="plusCircle" class="me-1" />
+              <strong>Novo Cadastro</strong>
+            </button>
+          
+            <!-- INPUT SEARCH -->
+            <div id="search" class="d-flex col-md-4">
+              <input type="text" class="form-control mr-2" id="inputFiltrar" placeholder="Pesquisar" />
+              <button class="btn btn-success d-flex align-items-center justify-content-start" id="filtrar">
+                <img src="../img/search.png" id="logoSearch" /> Filtrar
+              </button>
+            </div>
+            <!-- INPUT SEARCH -->
+          </div>
+          
+          
+
+
+          <div class="col-md-4 mb-5">
+           
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-lg modal-modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content" id="modal-content">
+                  <div class="modal-header">
+                    <h1
+                      class="modal-title fs-5 text-success"
+                      id="exampleModalLabel">
+                      <strong>Novo Paciente </strong>
+                    </h1>
+ <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" id="modal-body">
+                    <!-- CONTEUDO MODAL -->
+                    <form>
+                      <div
+                        class="col-md-11 d-flex justify-content-between font-montserrat flex-column flex-sm-row">
+                        <div class="mb-3 col-md-4 ms-1 d-inline-block">
+                          <label for="cpf" class="form-label text-secondary">CPF</label>
+                          <input type="text"
+                            class="form-control py-2"
+                            id="cpf"
+                            maxlength="11"/>
+                        </div>
+
+                        <div class="mb-3 col-md-4 ms-4 d-inline-block">
+                          <label for="nome" class="form-label text-secondary">Nome</label>
+                          <input
+                            type="text"
+                            class="form-control py-2"
+                            id="nome"
+                          />
+                        </div>
+
+                        <div class="mb-3 col-md-4 ms-4 d-inline-block">
+                          <label
+                            for="dataNascimento"
+                            class="form-label text-secondary"
+                            >Data de Nascimento</label
+                          >
+                          <input
+                            type="date"
+                            class="form-control py-2"
+                            id="dataNascimento"
+                          />
+                        </div>
+                      </div>
+                      <!-- ========================================================================================== -->
+                      <div class="col-md-11 d-flex justify-content-between flex-column flex-sm-row">
+                        <div class="mb-3 col-md-4 ms-1 d-inline-block">
+                          <label for="email" class="form-label text-secondary"
+                            >E-mail</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control py-2"
+                            id="email"
+                          />
+                        </div>
+
+                        <div class="mb-3 col-md-4 ms-4 d-inline-block">
+                          <label
+                            for="sexoGenero"
+                            class="form-label text-secondary"
+                            >Sexo/Gênero</label
+                          >
+                          <select class="form-select" id="MenuSexo">
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outros">Outros</option>
+                          </select>
+                        </div>
+
+                        <div class="mb-3 col-md-4 ms-4 d-inline-block">
+                          <label
+                            for="nacionalidade"
+                            class="form-label text-secondary"
+                            >Nacionalidade</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control py-2"
+                            id="nacionalidade"
+                          />
+                        </div>
+                      </div>
+                      <!-- ========================================================================================== -->
+                      <div class="col-md-11 d-flex justify-content-between flex-column flex-sm-row">
+                        <div class="mb-3 col-md-4 ms-1 d-inline-block">
+                          <label
+                            for="naturalidade"
+                            class="form-label text-secondary"
+                            >Naturalidade</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control py-2"
+                            id="naturalidade"
+                          />
+                        </div>
+
+                        <div class="mb-3 col-md-4 ms-4 d-inline-block">
+                          <label
+                            for="profissao"
+                            class="form-label text-secondary"
+                            >Profissão</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control py-2"
+                            id="profissao"
+                          />
+                        </div>
+
+                        <div class="mb-3 col-md-4 ms-4 d-inline-block">
+                          <label
+                            for="escolaridade"
+                            class="form-label text-secondary"
+                            >Escolaridade</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control py-2"
+                            id="escolaridade"
+                          />
+                        </div>
+                      </div>
+                      <!-- ========================================================================================== -->
+                      <div class="col-md-11 d-flex justify-content-between flex-column flex-sm-row">
+                        <div class="mb-3 col-md-4 ms-1 d-inline-block">
+                          <label
+                            for="estadoCivil"
+                            class="form-label text-secondary"
+                            >Estado Civil</label
+                          >
+                          <select class="form-select" id="estadoCivil">
+                            <option value="Solteiro(a)">Solteiro(a)</option>
+                            <option value="Divorciado(a)">Divorciado(a)</option>
+                            <option value="Casado(a)">Casado(a)</option>
+                            <option value="Outros">Outros</option>
+                          </select>
+                        </div>
+
+                        <div class="mb-3 col-md-4 ms-4 d-inline-block">
+                          <label for="mae" class="form-label text-secondary"
+                            >Mãe</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control py-2"
+                            id="mae"
+                          />
+                        </div>
+
+                        <div class="mb-3 col-md-4 ms-4 d-inline-block">
+                          <label for="pai" class="form-label text-secondary"
+                            >Pai</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control py-2"
+                            id="pai"
+                          />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- BUTTONS -->
+                  <div class="modal-footer py-4 d-flex justify-content-between">
+                    <div class="align-self-center">
+                      <p class="text-secondary mb-0">
+                        <span class="text-danger">*</span>Campos obrigatórios
+                      </p>
+                    </div>
+                    <div>
+    <button type="button" class="btn btn-outline text-secondary me-2" data-bs-dismiss="modal">Cancelar</button>
+    <button type="button" class="btn btn-success px-4" id="btnRegisterPaciente"> Cadastrar </button>
+                    </div>
+                  </div>
+                  <!-- BUTTONS -->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- TABLE -->
+          <div class="table-responsive">
+            <table class="table border" id="tabela">
+              <thead>
+                <tr>
+                  <th class="border text-primary col-sm-1">Código</th>
+                  <th class="border text-primary">Nome</th>
+                  <th class="border text-primary">CPF</th>
+                  <th class="border text-primary col-sm-2" id="action">
+                    Ações
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="PatientsContent"></tbody>
+      
+        </table> <!-- TABLE -->
+          </div>
+      
+        </div>
+        <div id="pagination" class="d-flex justify-content-end me-3"></div> 
+      </div>
+   
+    </div>  
+
+     
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/LoginCheckContent.js"></script>
+  </body>
+</html>

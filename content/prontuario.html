@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projeto Wexer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1bd40db174.js" crossorigin="anonymous"></script>
+    
+
+    <!-- Favi icon -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="../favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+
+
+        <!-- START OF NAVBAR -->
+        <nav class="d-flex justify-content-around align-items-center">
+          <div class="col ps-5 mt-2 ms-5 text-secondary d-inline-block">
+            <a href="home.html" class="dropdown-item text-decoration-none text-secondary Comfortaa-font" id="voltarHome">Voltar para listagem</a>
+            </div>
+          <div
+            class="dropdown justify-content-end text-end d-flex align-items-center h-100 text-success fs-5 me-3 font-montserrat">
+            <span id="Welcome">Bem vindo(a),</span> 
+            <button
+              class="btn btn-outline dropdown-toggle border-0 p-0 mx-2"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <strong
+                class="text-success fs-5 text-capitalize font-montserrat"
+                id="ShowName"
+              ></strong>
+            </button>
+            <ul class="dropdown-menu">
+              <li><span class="dropdown-item" id="showEmail"></span></li>
+                            <li>
+                <span class="dropdown-item" id="logOut"><i class="fa-solid fa-share fa-flip-vertical me-1" style="color: #017849"></i >Sair</span>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- END OF NAVBAR -->
+    
+        <!-- IMAGE INSIDE NAVBAR -->
+        <div id="logo">
+          <img src="../img/Vectorverde.png" alt="logo O" id="letraO" />
+          <img src="../img/Vectorxverde.png" alt="logo X" id="letraX" />
+        </div>
+        <!-- IMAGE INSIDE OF NAVBAR -->
+
+      <div class="container-fluid">
+        
+        <div class="mt-4 pt-1" id="h3Prontuario">
+          <div class="ps-3 ms-5 mt-5 pt-4">    
+            <h3 class="text-secondary fs-3 ms-5 Comfortaa-font">
+              Prontuário
+            </h3>
+          </div>
+        </div>
+        
+        
+            
+                 
+      <div class="d-flex justify-content-center flex-wrap gap-5" id="divSessoes">
+      <div class="card mb-4  shadow px-5" id="cardProntuario1">
+        <div class="card-body">
+            <div class="ms-2 d-flex align-items-start flex-column">
+                  <p class="text-success mb-0 "><img class="align-items-center me-2" src="../img/user.png">Paciente</p>
+                  <p class="text-secondary text-capitalize" id="NomeURL"></p>
+              </div>
+              
+              <div class="ms-2 d-flex align-items-start flex-column">
+                  <p class="text-success mb-0"><img class="align-items-center me-2" src="../img/nascimento.png">Nascimento</p>
+                  <p class="text-secondary text-capitalize" id="NascimentoURL"></p>
+              </div>
+              
+              <div class="ms-2 d-flex align-items-start flex-column">
+                  <p class="text-success mb-0"><img class="align-items-center me-2" src="../img/profissao.png">Profissão</p>
+                  <p class="text-secondary text-capitalize" id="ProfissaoURL"></p>
+              </div>
+
+              <div class="ms-2 d-flex align-items-start flex-column">
+                <p class="text-success mb-0"><img class="align-items-center me-2" src="../img/escolaridade.png">Escolaridade</p>
+                <p class="text-secondary text-capitalize" id="EscolaridadeURL"></p>
+            </div>
+        </div>
+      </div><!-- Card da esquerda -->
+
+
+
+      
+      <div class="card shadow" id="cardProntuario2">
+        <div class="card-body mt-2 d-flex justify-content-center">
+          <div>
+           
+        <!-- Button trigger modal -->
+    <button class="btn btn-outline me-3" data-bs-toggle="modal" data-bs-target="#ModalSessao"><img src="../img/session.png" alt="icone de uma cabeça com coração no centro" class="mb-1">
+    Sessão
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="ModalSessao" tabindex="-1" aria-labelledby="ModalSessao" aria-hidden="true" >
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-success" id="ModalSessao"><strong>Nova Sessão</strong></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div> <span class="bg-success bg-gradient rounded-circle text-light me-1 numbersCircle">1</span> Dados Gerais
+          </div>
+
+          <div class="d-flex justify-content-around mt-1 flex-column flex-sm-row">
+              <div class="mt-2 me-3">
+                <label for="data" class="form-label text-secondary"><small>Data*</small></label>
+                <input type="date" class="form-control" aria-describedby="data" id="dataSessao" placeholder="20/05/2023">
+              </div>
+
+              <div class="mb-3 me-3 mt-2 flex-column flex-sm-row">
+                <label for="Hora" class="form-label text-secondary"><small>Hora de início*</small></label>
+                <select name="Horarios" id="HoraStart" class="form-select">
+                  <option value="6:00" selected>6:00</option>
+                  <option value="7:00">7:00</option>
+                  <option value="8:00">8:00</option>
+                  <option value="9:00">9:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                </select>
+              </div>
+
+              <div class="mb-3 mt-2 flex-column flex-sm-row">
+                <label for="Hora" class="form-label text-secondary"><small>Hora fim*</small></label>
+                <select name="Horarios" id="HoraFim" class="form-select">
+                  <option value="6:00">6:00</option>
+                  <option value="7:00">7:00</option>
+                  <option value="8:00">8:00</option>
+                  <option value="9:00">9:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="13:00" selected>13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                </select>
+              </div>
+          </div>  
+          <div> <span class="bg-success bg-gradient rounded-circle text-light me-2 numbersCircle" >2</span>Sessão
+          </div>
+          <div>
+            <div class="my-3 me-3 flex-column flex-sm-row">
+              <label for="Hora" class="form-label text-secondary"><small>Título*</small></label>
+              <input type="text" class="form-control" id="titleSessao" placeholder="Digite">
+            </div>
+
+            <div class="mb-3 me-3 flex-column flex-sm-row">
+              <label for="Hora" class="form-label text-secondary"><small>Resumo da sessão*</small></label>
+
+              <div class="form-floating">
+                <textarea class="form-control" id="TextAreaSession"></textarea>
+              </div>
+            </div>
+          </div>
+
+
+          <div> <span class="bg-success bg-gradient rounded-circle text-light me-2 numbersCircle">3</span>Pagamento
+          </div>
+          <div class="d-flex justify-content-center mt-1 flex-column flex-sm-row">
+            <div class="mt-2 me-1 col-sm-3">
+              <label for="ValuePayment" class="form-label text-secondary"><small>Valor*</small></label>
+              <input type="number" class="form-control ps-0" id="ValuePayment" placeholder="R$ 150,00">
+            </div>
+
+            <div class="mb-3 me-1 mt-2 flex-column flex-sm-row">
+              <label for="PaymentMethods" class="form-label text-secondary"><small>Forma de Pagamento</small></label>
+              <select name="PaymentMethods" id="PaymentMethods" class="form-select">
+                <small>
+                <option value="PIX" selected>PIX</option>
+                <option value="Dinheiro">Dinheiro</option>
+                <option value="Cartão de Crédito">Cartão de Crédito</option>
+                <option value="Cartão de Débito">Cartão de Débito</option>
+                <option value="Cheque">Cheque</option>
+              </small>
+              </select>
+
+            </div>
+
+            <div class="align-items-center justify-content-between mt-2 flex-column flex-sm-row">
+              <label for="status" class="form-label text-secondary"><small>Status</small></label>
+              <div id="radio1">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="status" id="inlineRadio1" value="Pago">
+                  <label class="form-check-label" for="inlineRadio1"><small>Pago</small></label>
+                </div>
+                <div id="radio2"  class="form-check">
+                  <input class="form-check-input" type="radio" name="status" id="inlineRadio2" value="Não pago">
+                  <label class="form-check-label" for="inlineRadio2"><small>Não pago</small></label>
+                </div>
+              </div>
+            </div>
+            
+                  
+        </div> 
+
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline text-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success px-5" id="NewSession">Criar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+             <!--Fato Relevante -->
+              <button type="button" class="btn btn-outline " data-bs-toggle="modal" data-bs-target="#modalFatoRelevante">
+                <img src="../img/map.png" alt="imagem de alfinete" class="mb-1 "> Fato Relevante
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="modalFatoRelevante" tabindex="-1" aria-labelledby="modalFatoRelevante" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content" id="modalFatos">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-success" id="modalFatoRelevante"><strong>Novo Fato Relevante</strong></h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+
+                      <form>
+                        <div class="d-flex justify-content-start me-1 flex-column flex-sm-row">
+                          <div class="mb-2 mx-2 flex-column flex-sm-row">
+                            <label for="DataFato" class="form-label  text-secondary">Data*</label>
+                            <input type="date" class="form-control" id="DataFato" >
+                          </div>
+                          <div class="mb-2 flex-column flex-sm-row">
+                            <label for="TituloFato" class="form-label text-secondary">Título</label>
+                            <input type="text" class="form-control" id="TituloFato">
+                          </div>
+                        </div>
+                        <div>
+                          <p class="text-secondary">Descrição*</p>
+                          <div class="form-floating flex-column flex-sm-row">
+                            <textarea class="form-control" id="AreatextFatos"></textarea>
+                          </div>
+                        </div>
+                      </form>
+
+
+
+                    </div>
+                    <div class="modal-footer d-flex justify-content-between align-items-start">
+                      <div>
+                        <span class="text-danger">*</span><span class="text-secondary">Campos obrigatórios</span>
+                      </div>
+                      <div>
+                        <button type="button" class="btn bt-outline text-secondary" data-bs-dismiss="modal">cancelar</button>
+                        <button type="button" class="btn btn-primary px-5" id="NewFato">Criar</button>
+                      </div>               
+                    </div>                    
+
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+          <div class="d-flex justify-content-between mt-2 align-items-center">
+            <hr>
+            <div class="dropdown">
+              <button class="btn-outline btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filtar por: Todos
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id="todosFS" selected >Todos</a></li>
+                <li><a class="dropdown-item" href="#" id="ApenasSessao">Sessão</a></li>
+                <li><a class="dropdown-item" href="#" id="ApenasFatos">Fato Relevante</a></li>
+              </ul>
+            </div>
+          </div>
+        
+        <!-- Exibe os resultados da busca na API -->
+        <div class="mt-5 justify-content-between align-items-center" id="SessionResult">
+        </div>
+        </div>
+      </div> <!-- card 2 -->
+      </div>
+
+      
+        
+     
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <script src="../js/prontuarios.js"></script>
+  </body>
+</html>

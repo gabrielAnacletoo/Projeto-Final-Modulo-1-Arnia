@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projeto Wexer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style/style.css" />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1bd40db174.js" crossorigin="anonymous"></script>
+    
+
+    <!-- Favi icon -->
+    <link rel="icon" type="image/png" sizes="16x16"  href="../favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <!-- START OF NAVBAR -->
+    <nav >
+      <div
+        class="dropdown justify-content-end text-end d-flex align-items-center h-100 text-success fs-5 me-0 font-montserrat">
+        Bem vindo(a),
+        <button
+          class="btn btn-outline dropdown-toggle border-0 p-0 mx-2"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <strong
+            class="text-success fs-5 text-capitalize font-montserrat" id="ShowName"></strong>
+        </button>
+        <ul class="dropdown-menu">
+          <li><span class="dropdown-item" id="showEmail"></span></li>
+          <li><span class="dropdown-item" id="logOut"><i class="fa-solid fa-share fa-flip-vertical me-1" style="color: #017849;"></i>Sair</span></li>
+        </ul>
+      </div>
+    </nav >
+    <!-- END OF NAVBAR -->
+
+    <!-- IMAGE INSIDE NAVBAR -->
+    <div id="logo">
+      <img src="../img/Vectorverde.png" alt="logo O" id="letraO" />
+      <img src="../img/Vectorxverde.png" alt="logo X" id="letraX" />
+    </div>
+    <!-- IMAGE INSIDE OF NAVBAR -->
+
+    
+    <div class=" mt-5">
+      <div class="row d-flex  align-items-center mb-4">
+        <div class="col-12 mt-5 "  id="voltar">
+          <div class="card shadow ms-5">
+            <div class="card-body d-flex align-items-center">
+              <img src="../img/backicon.png" alt="imagem apontando para esquerda">
+              <button class="btn btn-outline p-0 ms-2" onclick="history.back()">Voltar</button>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+      <div id="h3sessoes">
+        <h3 class="text-secondary mt-4">Sessão</h3>
+      </div>
+      <div class="row justify-content-start ms-5 ps-4" id="divInformacoes">
+        
+        <div class="col col-md-10 col-lg-8">
+          <div class="card shadow mb-4">
+            <div class="card-body font-montserrat">
+              <p class="h5 mt-2">Sessão</p>
+              <p class="text-secondary" id="dados"></p>
+              <p class="text-secondary" id="content"></p>
+    
+              <p class="h5 mt-5 mb-3"><strong>Pagamento</strong></p>
+              <div class="d-flex justify-content-start gap-5 align-items-center pb-3">
+                <div>
+                  <p class="mb-0 text-secondary"><small>Valor</small></p>
+                  <p class="mb-0" id="valorsessao"><small></small></p>
+                </div>
+    
+                <div>
+                  <p class="mb-0 text-secondary"><small>Forma de pagamento</small></p>
+                  <p class="mb-0" id="formasessao"><small></small></p>
+                </div>
+    
+                <div>
+                  <p class="mb-0 text-secondary"><small>Status</small></p>
+                  <p class="mb-0" id="statuspagamento"><small></small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/sessionspage.js"></script>
+  </body>
+</html>

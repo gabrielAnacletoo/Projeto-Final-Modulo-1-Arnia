@@ -1,0 +1,85 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "nameUser": "",
+      "email": "",
+      "level": "",
+      "Password": "",
+      "ConfirmPassword": ""
+    },
+    {
+      "id": "v9nowhf",
+      "nameUser": "gabriel",
+      "email": "gabrielanacleto159@live.com",
+      "level": 0,
+      "Password": "Bielxds201!",
+      "ConfirmPassword": "Bielxds201!"
+    },
+    {
+      "id": "Ir9HcF-",
+      "nameUser": "admin",
+      "email": "admin@admin.com",
+      "level": 0,
+      "Password": "Admin01!",
+      "ConfirmPassword": "Admin01!"
+    },
+    {
+      "id": "3RdYxPL",
+      "nameUser": "gabriel0000000000",
+      "email": "gabrieljjjjjjjjjjanacleto159@live.com",
+      "level": 0,
+      "Password": "Bielxds201!",
+      "ConfirmPassword": "Bielxds201!"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": "0",
+      "CPF": "",
+      "NomeCompleto": "",
+      "DataNascimento": "",
+      "Email": "",
+      "Sexo": "",
+      "Nacionalidade": "",
+      "Naturalidade": "",
+      "Profissao": "",
+      "Escolaridade": "",
+      "EstadoCivil": "",
+      "Mae": "",
+      "Pai": "",
+      "sessoesPaciente": {
+        "data": "",
+        "HoraInicio": "",
+        "HoraFim": "",
+        "Titulo": "",
+        "Resumo": "",
+        "Valor": "",
+        "Forma": "",
+        "Status": ""
+      },
+      "FatoRelevante": {
+        "data": "",
+        "titulo": "",
+        "descricao": ""
+      }
+    },
+    {
+      "id": 1,
+      "CPF": "41110709987",
+      "NomeCompleto": "gabriel",
+      "DataNascimento": "1994-02-18",
+      "Email": "gabrielanacleto159@live.com",
+      "Sexo": "Masculino",
+      "Nacionalidade": "Brasileiro",
+      "Naturalidade": "Bauru",
+      "Profissao": "Mêcanico industrial",
+      "Escolaridade": "Ensino Médio",
+      "EstadoCivil": "Casado(a)",
+      "Mae": "Aparecida",
+      "Pai": "wilson",
+      "sessoesPaciente": [],
+      "FatoRelevante": []
+    }
+  ]
+}
