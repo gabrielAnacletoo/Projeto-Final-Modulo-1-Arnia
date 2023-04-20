@@ -60,7 +60,7 @@ window.addEventListener("load", async () => {
 
 //Criando novo fato
 const CreateFato = async (id, newFato) => {
-  const url = `https://pacientes.onrender.com/${id}/`;
+  const url = `https://pacientes.onrender.com/pacientes/${id}/`;
   const response = await fetch(url);
   const fatosresult = await response.json();
 
