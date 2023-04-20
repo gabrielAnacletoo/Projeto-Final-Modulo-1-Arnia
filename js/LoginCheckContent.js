@@ -139,6 +139,9 @@ const patientExists = async (CPF) => {
         for (let i = 0; i < inputs.length; i++) {
           inputs[i].style.border = "1px solid green";
         }
+        setTimeout(function() {
+          location.reload();
+        }, 1000);
     
   }
     } catch (error) {
@@ -174,8 +177,8 @@ const patientExists = async (CPF) => {
 
 //===========================================>> Exibir pacientes
 
-window.addEventListener("load", async (e) => {
-  e.preventDefault();
+window.addEventListener("load", async () => {
+
   const showPatients = await fetch(url);
   const response = await showPatients.json();
   const content = document.querySelector("#PatientsContent");
