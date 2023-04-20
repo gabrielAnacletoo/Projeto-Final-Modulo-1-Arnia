@@ -95,6 +95,11 @@ card2Inputs.forEach((input) => {
       e.stopPropagation();
     })
 
+
+    const btnstop = e.currentTarget.querySelector("#btnReg");
+    btnstop.addEventListener('click', (e) => {
+      e.stopPropagation();
+    })
     /*
     e.stopPropagation() é usada para impedir a propagação do evento de
      se propagar para os elementos pai. Isso significa que,
