@@ -141,7 +141,7 @@ const patientExists = async (CPF) => {
         }
         setTimeout(function() {
           location.reload();
-        }, 500);
+        }, 10);
     
   }
     } catch (error) {
@@ -512,7 +512,7 @@ createPagination();
         await editPatient(id, PatientEdited);
         setTimeout(function() {
           location.reload();
-        }, 500);
+        }, 10);
     
       } catch (error) {
         console.error(error);
@@ -533,7 +533,7 @@ createPagination();
       await deletePatient(id); //passa id para deletepatient
       setTimeout(function() {
         location.reload();
-      }, 100);
+      }, 10);
   
     });
   })
