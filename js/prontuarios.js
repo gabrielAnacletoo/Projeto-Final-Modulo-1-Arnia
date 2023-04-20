@@ -420,7 +420,7 @@ const editar = async (idSessao) => {
 
 setTimeout(function() {
           location.reload();
-        }, 500);
+        }, 300);
 
     });
   } catch (error) {
