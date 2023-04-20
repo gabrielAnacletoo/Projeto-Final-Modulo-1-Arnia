@@ -415,7 +415,7 @@ const editar = async (idSessao) => {
         body: JSON.stringify(result)
       };
 
-      const response = await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`, options);
+      const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`, options);
       const updatedSession = await response.json();
 
     });
@@ -450,7 +450,7 @@ Se não tiver fatos relevantes com o mesmo id da sessão excluida, o array sesso
 const deleteSession = async (id) => {
   try {
     const idurl = urlParams.get("id");
-    const url = `https://pacientes.onrender.com/${idurl}`;
+    const url = `https://pacientes.onrender.com/pacientes/${idurl}`;
     const conn = await fetch(url);
     const sessoesDelet = await conn.json();
     const fatosdelet = sessoesDelet.FatoRelevante;
@@ -469,7 +469,7 @@ const deleteSession = async (id) => {
         );
       }
     }
-    await fetch(`https://pacientes.onrender.com/${idurl}`, {
+    await fetch(`https://pacientes.onrender.com/pacientes/${idurl}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -515,7 +515,7 @@ const editarFatos = async (idFato) => {
         body: JSON.stringify(result)
       };
 
-      const response = await fetch(`https://pacientes.onrender.com/${urlParams.get('id')}`, options);
+      const response = await fetch(`https://pacientes.onrender.com/pacientes/${urlParams.get('id')}`, options);
       const updatedSession = await response.json();
     })
   } catch (error) {
