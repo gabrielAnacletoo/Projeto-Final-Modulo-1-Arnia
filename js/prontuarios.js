@@ -485,7 +485,7 @@ const deleteSession = async (id) => {
   }
 setTimeout(function() {
           location.reload();
-        }, 500);
+        }, 10);
 }
 
 
