@@ -134,11 +134,11 @@ const patientExists = async (CPF) => {
     alert("ja existe um paciente com esse CPF cadastrado");
   } else {
     await createPatient(NewPatient)
-
-    const inputs = document.querySelectorAll("input");
-        for (let i = 0; i < inputs.length; i++) {
-          inputs[i].style.border = "1px solid green";
-        }
+    const modal = document.querySelector('#modalcriacao');
+    modal.classList.add('show');
+    modal.style.display = 'block';
+    const modalBody = document.querySelector('#modalBody');
+    modalBody.innerHTML = `<p class="text-success"> Paciente cadastrado com sucesso!</p>`
         setTimeout(function() {
           location.reload();
         }, 10);
@@ -560,3 +560,6 @@ const corresponde = conteudoCelula.toLowerCase().indexOf(nomeInput) >= 0;
 tabela.rows[i].style.display = corresponde ? '' : 'none';
 }
 }
+
+
+// criar array global para pessquisar por ela 
