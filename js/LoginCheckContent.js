@@ -456,9 +456,7 @@ createPagination();
       );
       try {
         //PEGA OS INPUTS
-        const CPFPatient = modalEditor.querySelector(
-          `[data-id="${id}"] #cpfEdit`
-        ).value;
+        const CPFPatient = modalEditor.querySelector(`[data-id="${id}"] #cpfEdit`).value;
         const NomePatient = modalEditor.querySelector(
           `[data-id="${id}"] #nomeEdit`
         ).value;

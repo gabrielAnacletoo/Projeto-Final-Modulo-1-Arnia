@@ -85,21 +85,17 @@ btnVoltar.addEventListener('click', (e) => {
 });
 
 // impede que ao clicar nos inputs do card 2 a página volte ao card 1
+card2Inputs.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    e.stopPropagation()
+  })
+})
 card2Inputs.forEach((input) => {
   input.addEventListener('click', (e) => {
     e.stopPropagation();
 
 
-    const button = e.currentTarget.querySelector('#btnReg');
-    button.addEventListener('click', (e) => {
-      e.stopPropagation();
-    })
-
-
-    const btnstop = e.currentTarget.querySelector("#btnReg");
-    btnstop.addEventListener('click', (e) => {
-      e.stopPropagation();
-    })
+  
     /*
     e.stopPropagation() é usada para impedir a propagação do evento de
      se propagar para os elementos pai. Isso significa que,
