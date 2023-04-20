@@ -345,6 +345,14 @@ hr {
 #divOfSessoes {
   margin-top: 0.6em;
 }
+
+@media screen and (max-width: 750px) {
+#cardProntuario2 {
+    display: flex;
+    width:19em;
+    height: 6.2em;
+  }
+}
 @media screen and (max-width: 768px) {
   #Welcome {
     display: none;
