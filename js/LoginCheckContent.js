@@ -125,11 +125,13 @@ const patientExists = async (CPF) => {
   const PatientCheck = await patientExists(PacienteCPF)
 
   const inputsCadastro = document.querySelectorAll('input[name="inputCadastro"]')
-  let camposVazios = false
 
-  for(let i =0; i < camposVazios.length; i++) {
-    if (inputsCadastro[i].value === ""){
-      camposVazios = true
+
+  let camposVazios = false
+  for (let i = 0; i < inputsCadastro.length; i++) {
+    if (inputsCadastro[i].value === "") {
+      camposVazios = true;
+      break;
     }
   }
   if (camposVazios) {
