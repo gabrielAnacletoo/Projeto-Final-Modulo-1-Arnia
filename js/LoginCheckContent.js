@@ -123,19 +123,27 @@ const patientExists = async (CPF) => {
 
   // VERIFICA OS CAMPOS E SE JA EXISTE UM PACIENTE COM ESSE CPF
   const PatientCheck = await patientExists(PacienteCPF)
+
   const inputsCadastro = document.querySelectorAll('input[name="inputCadastro"]')
-  if (inputsCadastro === "" || inputsCadastro === null) {
+  let camposVazios = false
+
+  for(let i =0; i < camposVazios.length; i++) {
+    if (inputsCadastro[i].value === ""){
+      camposVazios = true
+    }
+  }
+  if (camposVazios) {
     alert("Todos os campos precisam ser preenchidos");
   } else if (PatientCheck) {
     alert("ja existe um paciente com esse CPF cadastrado");
   } else {
-    await createPatient(NewPatient)
-  const modal = new bootstrap.Modal(document.querySelector('#modalOK'))
-  modal.show()
-  setTimeout(function() {
-    location.reload();
-  }, 3000)    
-  }
+    await createPatient(NewPatient);
+    const modal = new bootstrap.Modal(document.querySelector('#modalOK'));
+    modal.show();
+    setTimeout(function() {
+      location.reload();
+    }, 3000);
+  }  
     } catch (error) {
       console.log(error);
     }
