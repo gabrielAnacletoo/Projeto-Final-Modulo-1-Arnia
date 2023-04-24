@@ -134,16 +134,16 @@ const patientExists = async (CPF) => {
     alert("ja existe um paciente com esse CPF cadastrado");
   } else {
     await createPatient(NewPatient)
+  const modal = new bootstrap.Modal(document.querySelector('#modalOK'))
+  modal.show()
+  setTimeout(function() {
+    location.reload();
+  }, 5000);
 
-    const inputs = document.querySelectorAll("input");
+         // const inputs = document.querySelectorAll("input");
         // for (let i = 0; i < inputs.length; i++) {
         //   inputs[i].style.border = "1px solid green";
         // }
-        const modal = document.querySelector('#modalOK')
-        modal.setAttribute('aria-hidden', 'false')
-        setTimeout(function() {
-          location.reload();
-        }, 5000);
     
   }
     } catch (error) {
