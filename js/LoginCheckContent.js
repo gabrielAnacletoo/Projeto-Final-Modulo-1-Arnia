@@ -139,13 +139,11 @@ const patientExists = async (CPF) => {
         // for (let i = 0; i < inputs.length; i++) {
         //   inputs[i].style.border = "1px solid green";
         // }
-        const modal = document.querySelector('#modalSuccess')
-        modal.classList.remove('hide')
-        modal.classList.add('show')
+        const modal = document.querySelector('#modalOK')
         modal.setAttribute('aria-hidden', 'false')
         setTimeout(function() {
           location.reload();
-        }, 10);
+        }, 5000);
     
   }
     } catch (error) {
