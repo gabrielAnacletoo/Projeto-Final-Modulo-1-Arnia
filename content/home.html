@@ -99,7 +99,7 @@
           
           <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-success rounded-pill d-flex justify-content-start align-items-center py-2 mb-3 mb-md-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-success rounded-pill d-flex justify-content-start align-items-center py-2 mb-3 mb-md-0 shadow" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <img src="../img/plus-circle.png" id="plusCircle" class="me-1" />
               <strong>Novo Cadastro</strong>
             </button>
@@ -114,8 +114,6 @@
             <!-- INPUT SEARCH -->
           </div>
           
-          
-
 
           <div class="col-md-4 mb-5">
            
@@ -144,7 +142,7 @@
                         class="col-md-11 d-flex justify-content-between font-montserrat flex-column flex-sm-row">
                         <div class="mb-3 col-md-4 ms-1 d-inline-block">
                           <label for="cpf" class="form-label text-secondary">CPF</label>
-                          <input type="text"
+                          <input type="text" name="inputCadastro"
                             class="form-control py-2"
                             id="cpf"
                             maxlength="11"/>
@@ -152,7 +150,7 @@
 
                         <div class="mb-3 col-md-4 ms-2 d-inline-block">
                           <label for="nome" class="form-label text-secondary">Nome</label>
-                          <input
+                          <input name="inputCadastro"
                             type="text"
                             class="form-control py-2"
                             id="nome"
@@ -166,7 +164,7 @@
                             >Data de Nascimento</label
                           >
                           <input
-                            type="date"
+                            type="date" name="inputCadastro"
                             class="form-control py-2"
                             id="dataNascimento"
                           />
@@ -179,7 +177,7 @@
                             >E-mail</label
                           >
                           <input
-                            type="email"
+                            type="email" name="inputCadastro"
                             class="form-control py-2"
                             id="email"
                           />
@@ -192,7 +190,7 @@
                             >Sexo/Gênero</label
                           >
                           <select class="form-select" id="MenuSexo">
-                            <option value="Masculino">Masculino</option>
+                            <option value="Masculino" selected>Masculino</option>
                             <option value="Feminino">Feminino</option>
                             <option value="Outros">Outros</option>
                           </select>
@@ -205,7 +203,7 @@
                             >Nacionalidade</label
                           >
                           <input
-                            type="text"
+                            type="text" name="inputCadastro"
                             class="form-control py-2"
                             id="nacionalidade"
                           />
@@ -220,7 +218,7 @@
                             >Naturalidade</label
                           >
                           <input
-                            type="text"
+                            type="text" name="inputCadastro"
                             class="form-control py-2"
                             id="naturalidade"
                           />
@@ -228,12 +226,12 @@
 
                         <div class="mb-3 col-md-4 ms-2 d-inline-block">
                           <label
-                            for="profissao"
+                            for="profissao" 
                             class="form-label text-secondary"
                             >Profissão</label
                           >
                           <input
-                            type="text"
+                            type="text" name="inputCadastro"
                             class="form-control py-2"
                             id="profissao"
                           />
@@ -246,7 +244,7 @@
                             >Escolaridade</label
                           >
                           <input
-                            type="text"
+                            type="text" name="inputCadastro"
                             class="form-control py-2"
                             id="escolaridade"
                           />
@@ -261,7 +259,7 @@
                             >Estado Civil</label
                           >
                           <select class="form-select" id="estadoCivil">
-                            <option value="Solteiro(a)">Solteiro(a)</option>
+                            <option value="Solteiro(a)" selected>Solteiro(a)</option>
                             <option value="Divorciado(a)">Divorciado(a)</option>
                             <option value="Casado(a)">Casado(a)</option>
                             <option value="Outros">Outros</option>
@@ -273,7 +271,7 @@
                             >Mãe</label
                           >
                           <input
-                            type="text"
+                            type="text" name="inputCadastro"
                             class="form-control py-2"
                             id="mae"
                           />
@@ -284,7 +282,7 @@
                             >Pai</label
                           >
                           <input
-                            type="text"
+                            type="text" name="inputCadastro"
                             class="form-control py-2"
                             id="pai"
                           />
