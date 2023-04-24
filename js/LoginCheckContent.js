@@ -138,7 +138,7 @@ const patientExists = async (CPF) => {
   modal.show()
   setTimeout(function() {
     location.reload();
-  }, 5000);
+  }, 15000);
 
          // const inputs = document.querySelectorAll("input");
         // for (let i = 0; i < inputs.length; i++) {
