@@ -134,18 +134,18 @@ const patientExists = async (CPF) => {
     alert("ja existe um paciente com esse CPF cadastrado");
   } else {
     await createPatient(NewPatient)
-    const modal = document.querySelector('#modalcriacao');
-    modal.classList.remove('d-none');
-    modal.classList.add('show');
-    modal.style.display = 'block';
-    
-    setTimeout(function() {
-      location.reload();
-      modal.classList.add('d-none');
-      modal.classList.remove('show');
-      modal.style.display = 'none';
-    }, 10);
-    
+
+    const inputs = document.querySelectorAll("input");
+        // for (let i = 0; i < inputs.length; i++) {
+        //   inputs[i].style.border = "1px solid green";
+        // }
+        const modal = document.querySelector('#modalSuccess')
+        modal.classList.remove('hide')
+        modal.classList.add('show')
+        modal.setAttribute('aria-hidden', 'false')
+        setTimeout(function() {
+          location.reload();
+        }, 10);
     
   }
     } catch (error) {
