@@ -433,3 +433,6 @@ ul li #editsessionpng, #deletesessionpng {
 /*
 loader apois criar paciente
 */
+#modalOK {
+  width: 50px;
+}
