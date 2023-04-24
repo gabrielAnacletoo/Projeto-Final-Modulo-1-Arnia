@@ -121,11 +121,6 @@ const patientExists = async (CPF) => {
         FatoRelevante: [],
       };
 
-      
-    
-      
-
-      
   // VERIFICA OS CAMPOS E SE JA EXISTE UM PACIENTE COM ESSE CPF
   const PatientCheck = await patientExists(PacienteCPF);
   if (PacienteCPF === "" || PacienteCPF === null) {
@@ -138,21 +133,12 @@ const patientExists = async (CPF) => {
   modal.show()
   setTimeout(function() {
     location.reload();
-  }, 15000);
-
-         // const inputs = document.querySelectorAll("input");
-        // for (let i = 0; i < inputs.length; i++) {
-        //   inputs[i].style.border = "1px solid green";
-        // }
-    
+  }, 2000)    
   }
     } catch (error) {
       console.log(error);
     }
   })
-
-
-  
   // document.querySelector("#cpf").addEventListener("input", function(e) {
   //   let cpf = e.target.value;
   
