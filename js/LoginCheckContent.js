@@ -123,8 +123,17 @@ const patientExists = async (CPF) => {
 
   // VERIFICA OS CAMPOS E SE JA EXISTE UM PACIENTE COM ESSE CPF
   const PatientCheck = await patientExists(PacienteCPF)
-
   const inputsCadastro = document.querySelectorAll('input[name="inputCadastro"]')
+
+
+  const nomeValue = PacienteNome.value;
+  const nomeRegex = /^[A-Za-z]+$/;
+  const isNomeValid = nomeRegex.test(nomeValue);
+
+if (!isNomeValid) {
+  alert("O campo nome deve conter apenas letras");
+}
+
 
 
   let camposVazios = false
