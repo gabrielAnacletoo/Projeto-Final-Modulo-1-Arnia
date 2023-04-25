@@ -194,7 +194,7 @@ function renderPatients(page) {
                     <div class="col-md-11 d-flex justify-content-between flex-column flex-sm-row">
                     <div class="mb-3  col-md-4 ms-4 d-inline-block text-start">
                       <label for="cpf" class="form-label text-secondary">CPF</label>
-                      <input type="number" class="form-control py-2" id="cpf" disabled value="${Patients.CPF}">
+                      <input type="number" class="form-control py-2" id="cpf" disabled value="${cpfFormatado}">
                     </div>
           
                     <div class="mb-3 col-md-4 ms-4 d-inline-block text-start">
@@ -282,12 +282,11 @@ function renderPatients(page) {
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body conteudo-modal" id="modal-body"> <!-- CONTEUDO MODAL -->
-          
                   <form>
                     <div class="col-md-11 d-flex justify-content-between flex-column flex-sm-row">
                     <div class="mb-3  col-md-4 ms-4 d-inline-block text-start">
                       <label for="cpf" class="form-label text-secondary">CPF</label>
-                      <input type="number" class="form-control py-2" id="cpfEdit" value="${Patients.CPF}">
+                      <input type="number" class="form-control py-2" id="cpfEdit" value="${cpfFormatado}">
                     </div>
           
                     <div class="mb-3 col-md-4 ms-4 d-inline-block text-start">
@@ -372,20 +371,16 @@ function renderPatients(page) {
           <button id="DeletePatient" data-id="${Patients.id}" title="Deletar" class="btn btn-outline-danger rounded-3 px-1 py-1 d-inline-flex justify-content-center shadow-sm me-1 btnTabela"><i class="fa-solid fa-trash-can"></i></button>
           </td>
         </tr>
-      `;
-    }
-  });
-
+      `}
+  })
   content.innerHTML = tablePatients;
 }
-
 /*
 a função createPagination gera os botões de paginação
 ela usa um loop for pra criar um botao pra cada pagina o numero do botão é o [i]
 A função renderPatients(currentPage) é
  a que exibe na tela os pacientes da página currentPage
 */
-
 function createPagination() {
   const pagination = document.querySelector("#pagination");
   pagination.innerHTML = ""
@@ -404,14 +399,12 @@ function createPagination() {
 
 renderPatients(currentPage);
 createPagination();
-
   })
   
   /*
   Botão para editar os dados do paciente
   o botao abre um modal com os dados do paciente ja exibidos pelo forEach
   */
-
   const SaveEdit = document.querySelectorAll("#EditSave");
   SaveEdit.forEach((btnEdit) => {
     btnEdit.addEventListener("click", async () => {
@@ -419,7 +412,7 @@ createPagination();
       let id = btnEdit.getAttribute("data-id");
       const modalEditor = document.querySelector(
         `.modal-content[data-id="${id}"]`
-      );
+      )
       try {
         //PEGA OS INPUTS
         const CPFPatient = modalEditor.querySelector(`[data-id="${id}"] #cpfEdit`).value;
@@ -486,9 +479,6 @@ createPagination();
 
 
  
-
-
-
   const deleteBtn = document.querySelectorAll("#DeletePatient"); //precisa selecionar todos os botoes
   deleteBtn.forEach((btn) => {
     btn.addEventListener("click", async () => {
@@ -504,8 +494,6 @@ createPagination();
 
   
 });
-
-
 
 
 /*
