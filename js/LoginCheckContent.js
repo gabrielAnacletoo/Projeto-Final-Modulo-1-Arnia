@@ -116,12 +116,12 @@ const patientExists = async (CPF) => {
 
   const nomeValue = document.querySelector("#nome")
   const nomeRegex = /^[a-zA-ZÀ-ú ]+$/;
-  const isNomeValid = nomeRegex.test(nomeValue);
+  const isNomeValid = nomeRegex.test(nomeValue.value);
   
   if (!isNomeValid) {
     alert("O campo nome deve conter apenas letras");
   }
-  
+
   let camposVazios = false
   for (let i = 0; i < inputsCadastro.length; i++) {
     if (inputsCadastro[i].value === "") {
