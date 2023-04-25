@@ -79,6 +79,7 @@ const card2 = document.querySelector('#cardRegister2');
 const btnVoltar = document.querySelector('#back');
 const card2Inputs = card2.querySelectorAll('input');
 const botoescard2 = card2.querySelectorAll('button')
+const bodycard = card2.querySelector('#back')
 
 btnVoltar.addEventListener('click', (e) => {
   e.preventDefault();
@@ -88,6 +89,11 @@ btnVoltar.addEventListener('click', (e) => {
 // impede que ao clicar nos inputs do card 2 a página volte ao card 1
 botoescard2.forEach((button) => {
   button.addEventListener('click', (e) => {
+    e.stopPropagation()
+  })
+})
+bodycard.forEach((body) => { 
+  body.addEventListener('click', (e) => {
     e.stopPropagation()
   })
 })
@@ -153,9 +159,12 @@ btnRegister.addEventListener('click', async (e) => {
       SmallError.innerHTML = "A senha precisa ter no mínimo 8 dígitos";
     } else if (/^(?=.*[@!#$%^&*()/\\])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(PasswordRegister) && /^(?=.*[@!#$%^&*()/\\])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(PasswordRegisterC)) {
       //VERIFICA SE AS SENHAS ATENDEM AOS REQUISITOS DA REGEX
-      alert("Usuario Cadastrado com sucesso")
       await createPost(NewUser)
-      window.location.replace("../index.html");
+      alert("Usuario Cadastrado com sucesso")
+      setTimeout(() => {
+        window.location.replace("../index.html");
+      }, 10);
+      
     } else {
       SmallError.innerHTML = "As senhas devem conter pelo menos um caractere especial, letra minúscula e letra maiúscula";
     }
