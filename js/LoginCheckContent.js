@@ -166,13 +166,13 @@ function renderPatients(page) {
   patients.forEach((Patients) => {
   let regexCpf = /^(\d{3})(\d{3})(\d{3})(\d{2})$/;
   let cpfFormatado = Patients.CPF.replace(regexCpf, "$1.$2.$3-$4")
-  console.log(`Nome: ${Patients.NomeCompleto} - CPF: ${cpfFormatado}`)
+
  if (Patients.id > 0) {
       tablePatients += `
           <tr>
           <th class="border"><button class="btn btn-outline"  data-bs-toggle="modal" data-bs-target="#ViewPatient-${Patients.id}">${Patients.id}</button></th>
           <td class="border"><button class="btn btn-outline"  data-bs-toggle="modal" data-bs-target="#ViewPatient-${Patients.id}">${Patients.NomeCompleto}</button></td>
-          <td class="border"><button class="btn btn-outline"  data-bs-toggle="modal" data-bs-target="#ViewPatient-${Patients.id}">${Patients.CPF}</button></td>
+          <td class="border"><button class="btn btn-outline"  data-bs-toggle="modal" data-bs-target="#ViewPatient-${Patients.id}">${cpfFormatado}</button></td>
           <td class="border text-center align-middle">
           
           <!-- Button Prontuario -->
