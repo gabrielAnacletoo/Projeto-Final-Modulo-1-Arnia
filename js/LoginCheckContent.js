@@ -194,7 +194,7 @@ function renderPatients(page) {
                     <div class="col-md-11 d-flex justify-content-between flex-column flex-sm-row">
                     <div class="mb-3  col-md-4 ms-4 d-inline-block text-start">
                       <label for="cpf" class="form-label text-secondary">CPF</label>
-                      <input type="number" class="form-control py-2" id="cpf" disabled value="${cpfFormatado}">
+                      <input type="number" class="form-control py-2" id="cpf" disabled value="${Patients.CPF}">
                     </div>
           
                     <div class="mb-3 col-md-4 ms-4 d-inline-block text-start">
@@ -286,7 +286,7 @@ function renderPatients(page) {
                     <div class="col-md-11 d-flex justify-content-between flex-column flex-sm-row">
                     <div class="mb-3  col-md-4 ms-4 d-inline-block text-start">
                       <label for="cpf" class="form-label text-secondary">CPF</label>
-                      <input type="number" class="form-control py-2" id="cpfEdit" value="${cpfFormatado}">
+                      <input type="number" class="form-control py-2" id="cpfEdit" value="${Patients.CPF}">
                     </div>
           
                     <div class="mb-3 col-md-4 ms-4 d-inline-block text-start">
