@@ -145,40 +145,13 @@ const patientExists = async (CPF) => {
       console.log(error);
     }
   })
-  // document.querySelector("#cpf").addEventListener("input", function(e) {
-  //   let cpf = e.target.value;
-  
-  //   // Remove tudo o que não é dígito
-  //   cpf = cpf.replace(/\D/g, '');
-  
-  //   // Adiciona os separadores
-  //   cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-  
-  //   // Atualiza o valor do campo
-  //   e.target.value = cpf;
-  // });
-  
-  
-  
 
-
-
-
-
-
-
-
-
-//===========================================>> Exibir pacientes
-
+//Exibir pacientes
 window.addEventListener("load", async () => {
-
   const showPatients = await fetch(url);
   const response = await showPatients.json();
   const content = document.querySelector("#PatientsContent");
  
-
-
   response.forEach((Patients) => {
    const perPage = 4; // quantidade de pacientes por pagina
    const pages = Math.ceil(response.length / perPage); // quantidade total de paginas
@@ -191,7 +164,9 @@ function renderPatients(page) {
 
   let tablePatients = "";
   patients.forEach((Patients) => {
-   
+  let regexCpf = /^(\d{3})(\d{3})(\d{3})(\d{2})$/;
+  let cpfFormatado = Patients.CPF.replace(regexCpf, "$1.$2.$3-$4")
+  console.log(`Nome: ${Patients.NomeCompleto} - CPF: ${cpfFormatado}`)
  if (Patients.id > 0) {
       tablePatients += `
           <tr>
@@ -204,9 +179,6 @@ function renderPatients(page) {
           <a href="prontuario.html?id=${Patients.id}&nome=${Patients.NomeCompleto}&data=${Patients.DataNascimento}&profissao=${Patients.Profissao}&escolaridade=${Patients.Escolaridade}"><button  type="button" class="btn btn-outline-success rounded-3 px-1 py-1 d-inline-flex justify-content-center shadow-sm me-1 btnTabela"
           data-bs-target="#ViewPatient-${Patients.id}" title="Prontuario"> <i class="fa-solid fa-clipboard-user"></i> </button></a>
           
-
-
-
           <!-- Modal informações  -->
           <div class="modal fade" id="ViewPatient-${Patients.id}" tabindex="-1" aria-labelledby="ViewPatient" aria-hidden="true">
             <div class="modal-dialog modal-xl">
