@@ -78,6 +78,7 @@ const card2 = document.querySelector('#cardRegister2');
 
 const btnVoltar = document.querySelector('#back');
 const card2Inputs = card2.querySelectorAll('input');
+const botoescard2 = card2.querySelectorAll('button')
 
 btnVoltar.addEventListener('click', (e) => {
   e.preventDefault();
@@ -85,7 +86,7 @@ btnVoltar.addEventListener('click', (e) => {
 });
 
 // impede que ao clicar nos inputs do card 2 a página volte ao card 1
-card2Inputs.forEach((button) => {
+botoescard2.forEach((button) => {
   button.addEventListener('click', (e) => {
     e.stopPropagation()
   })
@@ -94,8 +95,6 @@ card2Inputs.forEach((input) => {
   input.addEventListener('click', (e) => {
     e.stopPropagation();
 
-
-  
     /*
     e.stopPropagation() é usada para impedir a propagação do evento de
      se propagar para os elementos pai. Isso significa que,
@@ -105,9 +104,6 @@ card2Inputs.forEach((input) => {
      e não quer que o evento se propague para os elementos pai.
 
     */
-
-
-
   });
 });
 
@@ -129,7 +125,7 @@ btnRegister.addEventListener('click', async (e) => {
     //VERIFICANDO SE USUARIO EXISTE
     const existingUser = await userExists(nameRegister, EmailRegister);
     if (existingUser) {
-      SmallError.innerHTML = "Usuário já existe"; // PERGUNTAR PRA LETICIA OU VITOR COMO PARAR DE REPETIR
+      SmallError.innerHTML = "Usuário já existe"
       setTimeout(() => {
         location.reload();
       }, 1000);
@@ -152,15 +148,9 @@ btnRegister.addEventListener('click', async (e) => {
     } else if (PasswordRegister !== PasswordRegisterC ) {
       // VERIFCA SE AS SENHAS CONHECIDEM
       SmallError.innerHTML = "Senhas não correspondem";
-      // setTimeout(() => {
-      //   location.reload();
-      // }, 1000);
     } else if(PasswordRegister.length < 8 && PasswordRegisterC.length < 8) {
       // VERIFICA SE AS SENHAS TEM NO MINIMO 8 CARACTERES
       SmallError.innerHTML = "A senha precisa ter no mínimo 8 dígitos";
-      // setTimeout(() => {
-      //   location.reload();
-      // }, 1000); 
     } else if (/^(?=.*[@!#$%^&*()/\\])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(PasswordRegister) && /^(?=.*[@!#$%^&*()/\\])(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(PasswordRegisterC)) {
       //VERIFICA SE AS SENHAS ATENDEM AOS REQUISITOS DA REGEX
       alert("Usuario Cadastrado com sucesso")
