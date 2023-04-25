@@ -89,42 +89,30 @@ const patientExists = async (CPF) => {
   btnCreate.addEventListener("click", async () => {
     try {
       const PacienteCPF = document.querySelector("#cpf").value;
-      const PacienteNome = document.querySelector("#nome").value;
-      const PacienteNascimento = document.querySelector("#dataNascimento").value;
-      const PacienteEmail = document.querySelector("#email").value;
       const PacienteSexo = document.querySelector("#MenuSexo");
-      const SelecSexo = PacienteSexo.value;
-      const PacienteNacionalidade = document.querySelector("#nacionalidade").value;
-      const PacienteNaturalidade = document.querySelector("#naturalidade").value;
-      const PacienteProfissao = document.querySelector("#profissao").value;
-      const PacienteEscolaridade = document.querySelector("#escolaridade").value;
       const PacienteEstadoCivil = document.querySelector("#estadoCivil");
-      const SelecEstavo = PacienteEstadoCivil.value;
-      const PacienteMae = document.querySelector("#mae").value;
-      const PacientePai = document.querySelector("#pai").value;
 
       const NewPatient = {
         id: "",
         CPF: PacienteCPF,
-        NomeCompleto: PacienteNome,
-        DataNascimento: PacienteNascimento,
-        Email: PacienteEmail,
-        Sexo: SelecSexo,
-        Nacionalidade: PacienteNacionalidade,
-        Naturalidade: PacienteNaturalidade,
-        Profissao: PacienteProfissao,
-        Escolaridade: PacienteEscolaridade,
-        EstadoCivil: SelecEstavo,
-        Mae: PacienteMae,
-        Pai: PacientePai,
+        NomeCompleto: document.querySelector("#nome").value,
+        DataNascimento: document.querySelector("#dataNascimento").value,
+        Email: document.querySelector("#email").value,
+        Sexo: PacienteSexo.value,
+        Nacionalidade: document.querySelector("#nacionalidade").value,
+        Naturalidade: document.querySelector("#naturalidade").value,
+        Profissao: document.querySelector("#profissao").value,
+        Escolaridade: document.querySelector("#escolaridade").value,
+        EstadoCivil: PacienteEstadoCivil.value,
+        Mae: document.querySelector("#mae").value,
+        Pai: document.querySelector("#pai").value,
         sessoesPaciente: [],
         FatoRelevante: [],
-      };
+      }
 
-  // VERIFICA OS CAMPOS E SE JA EXISTE UM PACIENTE COM ESSE CPF
+  // Verificação de Dados
   const PatientCheck = await patientExists(PacienteCPF)
   const inputsCadastro = document.querySelectorAll('input[name="inputCadastro"]')
-
 
   const nomeValue = document.querySelector("#nome")
   const nomeRegex = /^[a-zA-ZÀ-ú ]+$/;
@@ -134,9 +122,6 @@ const patientExists = async (CPF) => {
     alert("O campo nome deve conter apenas letras");
   }
   
-
-
-
   let camposVazios = false
   for (let i = 0; i < inputsCadastro.length; i++) {
     if (inputsCadastro[i].value === "") {
