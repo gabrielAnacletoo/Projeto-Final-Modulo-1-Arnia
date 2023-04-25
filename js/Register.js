@@ -79,7 +79,6 @@ const card2 = document.querySelector('#cardRegister2');
 const btnVoltar = document.querySelector('#back');
 const card2Inputs = card2.querySelectorAll('input');
 const botoescard2 = card2.querySelectorAll('button')
-const bodycard = card2.querySelector('#back')
 
 btnVoltar.addEventListener('click', (e) => {
   e.preventDefault();
@@ -92,11 +91,11 @@ botoescard2.forEach((button) => {
     e.stopPropagation()
   })
 })
-bodycard.forEach((body) => { 
-  body.addEventListener('click', (e) => {
-    e.stopPropagation()
-  })
-})
+const card2Body = document.querySelector('#cardRegister2 > .card-body');
+card2Body.addEventListener('click', (e) => {
+  e.stopPropagation();
+});
+
 card2Inputs.forEach((input) => {
   input.addEventListener('click', (e) => {
     e.stopPropagation();
