@@ -153,7 +153,7 @@ window.addEventListener("load", async () => {
   const content = document.querySelector("#PatientsContent");
  
   response.forEach((Patients) => {
-   const perPage = 4; // quantidade de pacientes por pagina
+   const perPage = 6; // quantidade de pacientes por pagina
    const pages = Math.ceil(response.length / perPage); // quantidade total de paginas
    let currentPage = 1; // página atual
 
